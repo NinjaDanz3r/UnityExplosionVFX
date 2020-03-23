@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953beb541740ddc499d005ee80c9ff29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   enabled:
     m_OverrideState: 1
@@ -28,7 +28,7 @@ MonoBehaviour:
     showEyeDropper: 1
   maxFogDistance:
     m_OverrideState: 0
-    m_Value: 5000
+    m_Value: 5
     min: 0
   mipFogMaxMip:
     m_OverrideState: 0
@@ -57,14 +57,14 @@ MonoBehaviour:
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 5000
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   anisotropy:
     m_OverrideState: 1
-    m_Value: 0.65
+    m_Value: 0.9
     min: -1
     max: 1
   globalLightProbeDimmer:
@@ -100,6 +100,131 @@ MonoBehaviour:
   - {fileID: 6775376097864012941}
   - {fileID: 7488742677745068149}
   - {fileID: -3305224281371206947}
+  - {fileID: 4201330102226258208}
+  - {fileID: 5789992824127245474}
+--- !u!114 &4201330102226258208
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f077503be6ae942a1e1245dbd53ea9, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  quality:
+    m_OverrideState: 0
+    m_Value: 1
+  threshold:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  intensity:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 1
+  scatter:
+    m_OverrideState: 0
+    m_Value: 0.7
+    min: 0
+    max: 1
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  dirtTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  dirtIntensity:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  anamorphic:
+    m_OverrideState: 0
+    m_Value: 1
+  m_Resolution:
+    m_OverrideState: 0
+    m_Value: 2
+  m_HighQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 1
+--- !u!114 &5789992824127245474
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81bcacc415a1f743bfdf703afc52027, type: 3}
+  m_Name: GradientSky
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 0
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxColor:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0}
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  top:
+    m_OverrideState: 1
+    m_Value: {r: 0.35602093, g: 0, b: 1.9999998, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  middle:
+    m_OverrideState: 1
+    m_Value: {r: 0.98039216, g: 0.12941177, b: 0.03137255, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  bottom:
+    m_OverrideState: 1
+    m_Value: {r: 0.14945078, g: 0.48442668, b: 0.9843138, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  gradientDiffusion:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &6775376097864012941
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -147,7 +272,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 5.9
   multiplier:
     m_OverrideState: 0
     m_Value: 1
